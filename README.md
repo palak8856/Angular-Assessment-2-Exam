@@ -1,4 +1,4 @@
-The project has been deployed at https://angularweatherapp1.netlify.app/ 
+The project has been deployed at https://angularweatherapp1.netlify.app/ and the project is available at master branch.
 
 # WeatherApp
 

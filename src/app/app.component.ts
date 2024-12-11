@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ViewChild } from '@angular/core';
+import { WeatherComponent } from './components/weather/weather.component';
+import { SearchComponent } from './components/search/search.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [WeatherComponent, SearchComponent]
 })
 export class AppComponent {
-  title = 'weather-app';
+  title = 'Weather App';
+
+  @ViewChild(WeatherComponent) weatherComponent!: WeatherComponent;
+
+  updateWeather(city: string) {
+    if (this.weatherComponent) {
+      this.weatherComponent.updateWeather(city);
+    }
+  }
 }

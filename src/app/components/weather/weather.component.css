@@ -1,0 +1,69 @@
+.weather-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .currentWeather-details{
+    font-style: italic;
+    font-size: 20px;
+    color: #285f30;
+    font-weight: 500;
+  }
+
+  .cityName{
+    color: #2a7e36;
+  }
+  
+  .forecast-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .forecast-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    margin: 10px;
+  }
+  
+  .forecast-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .forecast-card img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .forecast-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2a7e36;
+  }
+  
+  .forecast-card p {
+    margin: 5px 0;
+  }
+  
+  @media (max-width: 768px) {
+
+    .forecast-card {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .forecast-card {
+      padding: 15px;
+      width: 90%;
+    }
+  }

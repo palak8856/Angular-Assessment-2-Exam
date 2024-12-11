@@ -1,0 +1,30 @@
+<div class="weather-container">
+    <div *ngIf="error" class="error">
+      {{ error }}
+    </div>
+  
+    <div *ngIf="currentWeather && !error" class="current-weather">
+      <h2 class="cityName">{{ currentWeather.city.name }}</h2>
+      <p class="currentWeather-details">Temperature: {{ currentWeather.list[0].main.temp }}°C</p>
+      <p class="currentWeather-details">Humidity: {{ currentWeather.list[0].main.humidity }}%</p>
+      <p class="currentWeather-details">Wind Speed: {{ currentWeather.list[0].wind.speed }} m/s</p>
+      <p class="currentWeather-details">Conditions: {{ currentWeather.list[0].weather[0].description | titlecase }}</p>
+      <img
+        src="https://openweathermap.org/img/wn/{{ currentWeather.list[0].weather[0].icon }}@2x.png"
+        alt="{{ currentWeather.list[0].weather[0].description }}"
+      />
+    </div>
+  
+    <div *ngIf="forecast && !error && forecast.length > 0" class="forecast-container">
+      <div class="forecast-card" *ngFor="let day of forecast">
+        <h4>{{ day.dt_txt | date: 'MMM d' }}</h4>
+        <img
+          src="https://openweathermap.org/img/wn/{{ day.weather[0].icon }}@2x.png"
+          alt="{{ day.weather[0].description }}"
+        />
+        <p>High: {{ day.main.temp_max }}°C</p>
+        <p>Low: {{ day.main.temp_min }}°C</p>
+        <p>{{ day.weather[0].description | titlecase }}</p>
+      </div>
+    </div>
+  </div>

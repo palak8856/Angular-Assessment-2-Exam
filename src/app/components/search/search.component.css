@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  input {
+    padding: 12px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #2a7e36;
+    box-shadow: 0 0 8px rgba(74, 226, 102, 0.5);
+  }
+  
+  button {
+    background-color: #2a7e36;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-left: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button:hover {
+    background-color: rgb(74,226,102);
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(1);
+  }
